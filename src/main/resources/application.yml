@@ -1,0 +1,15 @@
+server:
+  servlet:
+    context-path: /sentinel
+  port: 8033
+
+### 自定义配置文件
+spring:
+    redis:
+      #哨兵节点配置
+      sentinel:
+        nodes: 192.168.14.101:26379,192.168.14.102:26380,192.168.14.103:26381
+        master: mymaster
+      #redis节点密码
+      password: 123
+      database: 0
